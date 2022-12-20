@@ -15,9 +15,10 @@ namespace Game
 		[SerializeField] private float m_stepDelay = 0.25f;
 		public float stepDelay => m_stepDelay;
 		[Header("Player")]
-		[SerializeField] private float m_range = 30f;
-		public float range => m_range;
-		[SerializeField] private float m_speed = 400f;
+		[SerializeField] private float m_speed = 2f;
 		public float speed => m_speed;
+
+		[SerializeField] private float m_power = 100f;
+		public float power => m_power;
 	}
 }

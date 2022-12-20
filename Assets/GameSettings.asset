@@ -15,5 +15,5 @@ MonoBehaviour:
   m_minDelay: 0.25
   m_maxDelay: 5
   m_stepDelay: 0.25
-  m_range: 30
-  m_speed: 400
+  m_speed: 2
+  m_power: 150
