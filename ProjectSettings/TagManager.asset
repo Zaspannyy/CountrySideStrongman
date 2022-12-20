@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainMenu
   - Game
+  - Lose
   layers:
   - Default
   - TransparentFX

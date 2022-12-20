@@ -35,7 +35,7 @@ namespace Game
 
 		public void MainMenuState()
 		{
-			ClearStones();
+			
 			foreach (GameObject ui in m_uiElements)
 				{
 				if (ui.tag == "MainMenu")
@@ -47,6 +47,21 @@ namespace Game
 			enabled = false;
 			RefreshScore(m_maxScore);
 		}
+		public void LoseState()
+        {
+			ClearStones();
+
+			foreach (GameObject ui in m_uiElements)
+            {
+				if (ui.tag == "Lose")
+				{
+					ui.SetActive(true);
+				}
+				else ui.SetActive(false);
+            }
+			enabled = false;
+			
+        }
 
 		private float CalcNextDelay()
 		{
@@ -85,9 +100,9 @@ namespace Game
 		private void OnGameOver()
 		{
 			GameEvents.onGameOver -= OnGameOver;
-			Debug.Log("Game Over");
+			
 
-			MainMenuState();
+			LoseState();
 			
 		}
 
@@ -111,7 +126,7 @@ namespace Game
 
 				m_delay = CalcNextDelay();
 				m_maxDelay -= m_settings.stepDelay;
-				if (m_maxDelay <= 0.25f)
+				if (m_maxDelay <= 0.75f)
                 {
 					m_maxDelay = 1f;
                 }

@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.coffee.softmask-for-ugui": {
+      "version": "file:C:/Users/Professional/Desktop/SoftMaskForUGUI-1.0.2",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
