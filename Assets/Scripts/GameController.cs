@@ -8,8 +8,7 @@ namespace Game
 	{
 		[SerializeField]
 		private StoneSpawner m_stoneSpawner;
-		[SerializeField] 
-		private float m_power = 300f;
+		
 		[SerializeField]
 		private UIScorePanel m_scorePanel;
 		[SerializeField]
@@ -29,6 +28,7 @@ namespace Game
 		private void Start()
 		{
 			MainMenuState();
+			
 		}
 		
 		
@@ -148,7 +148,7 @@ namespace Game
 				var stick = contact.thisCollider.GetComponent<Stick>();
 				
 				var body = stone.GetComponent<Rigidbody>();
-				body.AddForce(stick.dir * m_power, ForceMode.Impulse);
+				body.AddForce(stick.dir * m_settings.power, ForceMode.Impulse);
 
 				
 				m_score++;
